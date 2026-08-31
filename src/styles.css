@@ -64,12 +64,12 @@
 
   --gradient-hero: radial-gradient(
       120% 90% at 80% 0%,
-      color-mix(in oklab, var(--primary) 34%, transparent),
+      color-mix(in oklab, var(--primary) 22%, transparent),
       transparent 60%
     ),
     radial-gradient(
       90% 80% at 0% 20%,
-      color-mix(in oklab, var(--accent) 16%, transparent),
+      color-mix(in oklab, var(--accent) 9%, transparent),
       transparent 62%
     );
   --gradient-text: linear-gradient(
