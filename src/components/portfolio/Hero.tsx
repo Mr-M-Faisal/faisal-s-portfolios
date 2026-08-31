@@ -10,7 +10,8 @@ export function Hero() {
       id="top"
       className="relative flex min-h-screen items-center px-4 pt-28 pb-20 sm:px-6"
     >
-      <div className="mx-auto w-full max-w-5xl">
+      <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
