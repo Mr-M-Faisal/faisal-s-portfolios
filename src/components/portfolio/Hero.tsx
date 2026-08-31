@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowDown, Download, Sparkles } from "lucide-react";
+import faisal from "@/assets/faisal.png.asset.json";
 
 const stack = ["Next.js", "React", "Node.js", "AWS", "MongoDB", "Socket.IO"];
 
