@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowDown, Download, Sparkles } from "lucide-react";
+import faisal from "@/assets/faisal.png.asset.json";
 
 const stack = ["Next.js", "React", "Node.js", "AWS", "MongoDB", "Socket.IO"];
 
@@ -9,7 +10,8 @@ export function Hero() {
       id="top"
       className="relative flex min-h-screen items-center px-4 pt-28 pb-20 sm:px-6"
     >
-      <div className="mx-auto w-full max-w-5xl">
+      <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -84,6 +86,35 @@ export function Hero() {
             </li>
           ))}
         </motion.ul>
+      </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, y: 24 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="relative order-first mx-auto w-full max-w-[320px] lg:order-none lg:max-w-none"
+        >
+          <div className="absolute -inset-6 rounded-full bg-[radial-gradient(circle,color-mix(in_oklch,var(--color-primary)_35%,transparent),transparent_70%)] blur-2xl" />
+          <motion.div
+            aria-hidden
+            className="absolute -inset-2 rounded-full bg-[conic-gradient(from_0deg,var(--color-primary),var(--color-accent),transparent,var(--color-primary))] opacity-50 blur-[2px]"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+          />
+          <motion.div
+            animate={{ y: [0, -12, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="relative overflow-hidden rounded-full border border-border/60 bg-card/40 backdrop-blur-sm"
+          >
+            <img
+              src={faisal.url}
+              alt="Portrait of Muhammad Faisal, software engineering student and full-stack cloud developer"
+              className="aspect-square w-full object-cover"
+              width={640}
+              height={640}
+            />
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
