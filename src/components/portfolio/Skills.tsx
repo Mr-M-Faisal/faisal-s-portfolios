@@ -51,7 +51,7 @@ export function Skills() {
             <Reveal
               key={g.title}
               delay={i * 0.07}
-              className={i === groups.length - 1 ? "sm:col-span-2" : undefined}
+              className={i === groups.length - 1 ? "sm:col-span-2" : ""}
             >
               <div className="glass-card h-full rounded-2xl p-6">
                 <div className="flex items-center gap-3">
