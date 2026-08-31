@@ -1,24 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Background } from "@/components/portfolio/Background";
+import { Nav } from "@/components/portfolio/Nav";
+import { Hero } from "@/components/portfolio/Hero";
+import { About } from "@/components/portfolio/About";
+import { Skills } from "@/components/portfolio/Skills";
+import { Projects } from "@/components/portfolio/Projects";
+import { Education } from "@/components/portfolio/Education";
+import { Contact } from "@/components/portfolio/Contact";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Muhammad Faisal — Full-Stack Cloud Developer" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Muhammad Faisal, Software Engineering student and full-stack cloud developer building scalable apps with Next.js, Node.js and AWS.",
+      },
+      { property: "og:title", content: "Muhammad Faisal — Full-Stack Cloud Developer" },
+      {
+        property: "og:description",
+        content:
+          "Real-time apps, clean interfaces and AWS cloud infrastructure. Explore projects, skills and contact details.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="relative">
+      <Background />
+      <Nav />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Education />
+      <Contact />
+    </main>
   );
 }
