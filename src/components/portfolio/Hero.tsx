@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { ArrowDown, Download, Sparkles } from "lucide-react";
-import faisal from "@/assets/faisal.png.asset.json";
 
 const stack = ["Next.js", "React", "Node.js", "AWS", "MongoDB", "Socket.IO"];
 
@@ -107,7 +106,7 @@ export function Hero() {
             className="relative overflow-hidden rounded-full border border-border/60 bg-card/40 backdrop-blur-sm"
           >
             <img
-              src={faisal.url}
+              src="/faisal.png"
               alt="Portrait of Muhammad Faisal, software engineering student and full-stack cloud developer"
               className="aspect-square w-full object-cover"
               width={640}
